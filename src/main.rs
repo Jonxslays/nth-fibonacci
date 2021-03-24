@@ -15,6 +15,7 @@ fn main() {
     println!("#{} in the sequence is {}.", input, calculate(input));
 }
 
+// Can calculate up to the 93rd fib number due to u64 size limitations
 fn calculate(mut n: u64) -> u64 {
     let mut first = 0;
     let mut second = 1;
@@ -34,6 +35,7 @@ fn calculate(mut n: u64) -> u64 {
     output
 }
 
+// Converts string input to u64
 fn convert(input: &mut String) -> u64 {
     input.trim().parse().expect("Failed to convert to u64.")
 }
